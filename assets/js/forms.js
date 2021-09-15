@@ -12,7 +12,8 @@ $("#userData").submit((e) => {
       fadeOut(".success-message-user");
     },
     error: function(err) {
-      console.log("Failed");
+      $(".error-message-user").css("display", "block");
+      fadeOut(".error-message-user");
     }
   })
 })
@@ -25,11 +26,36 @@ $("#userHistory").submit((e) => {
     type: "POST",
     success: function(response) {
       $(".success-message-history").css("display", "block");
-      $('#userData')[0].reset();
+      $('#userHistory')[0].reset();
       fadeOut(".success-message-history");
     },
     error: function(err) {
-      console.log("Failed");
+      $(".error-message-history").css("display", "block");
+      fadeOut(".error-message-history");
     }
   })
 })
+
+$("#nonUserHistory").submit((e) => {
+  e.preventDefault()
+  $.ajax({
+    url: "https://script.google.com/macros/s/AKfycbyzeJNQ2xMb-3s8KxWW1kyxktY92qe4oFB0AyKw/exec",
+    data: $("#nonUserHistory").serialize(),
+    type: "POST",
+    success: function(response) {
+      $(".success-message-non").css("display", "block");
+      $('#nonUserHistory')[0].reset();
+      fadeOut(".success-message-non");
+    },
+    error: function(err) {
+      $(".error-message-non").css("display", "block");
+      fadeOut(".error-message-non");
+    }
+  })
+})
+
+function fadeOut(className) {
+  setTimeout(function(){
+    $(className).remove();
+  }, 6000);
+}

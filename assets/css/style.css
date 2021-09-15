@@ -61,25 +61,16 @@ body {
   color: #ffffff;
 }
 
-.success-message-user {
+.success-message-user, .success-message-history, .success-message-non {
 
   display: none;
 }
 
-.error-message-user {
+.error-message-user, .error-message-history, .error-message-non {
 
   display: none;
 }
 
-.success-message-history {
-
-  display: none;
-}
-
-.error-message-history {
-
-  display: none;
-}
 
 @media screen and (max-width: 500px) {
 

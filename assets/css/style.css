@@ -55,6 +55,32 @@ body {
   margin-top: 10px;
 }
 
+.custom-submit {
+
+  background-color: #050505;
+  color: #ffffff;
+}
+
+.success-message-user {
+
+  display: none;
+}
+
+.error-message-user {
+
+  display: none;
+}
+
+.success-message-history {
+
+  display: none;
+}
+
+.error-message-history {
+
+  display: none;
+}
+
 @media screen and (max-width: 500px) {
 
   .section-row {

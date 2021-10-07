@@ -94,7 +94,14 @@ body {
   display: none;
 }
 
+.userDatabase {
+
+  display: none;
+  margin-bottom: 20px;
+}
+
 .float{
+
 	position:fixed;
 	width:60px;
 	height:60px;

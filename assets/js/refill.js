@@ -18,6 +18,7 @@ fetch(urlA + apiKey).then((response) => response.json()).then((values) => {
       let number = dataA.values[i][1];
       let etrDate = dataA.values[i][4];
       let eteDate = dataA.values[i][6];
+
       for (var j = 0; j <= uidno.length; j++) {
         if (number == uidno[j]) {
 
@@ -89,4 +90,5 @@ function fetchUID() {
 
    });
 }
+
 var interv = setInterval(endLoader, 500);

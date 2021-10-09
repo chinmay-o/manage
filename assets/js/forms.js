@@ -72,6 +72,24 @@ $("#userRefill").submit((e) => {
   })
 })
 
+$("#userbaseRefill").submit((e) => {
+  e.preventDefault()
+  $.ajax({
+    url: "https://script.google.com/macros/s/AKfycbymUOCpG7EjAvGPW_uGFolceBVLfQmrUoRVS2z6sw/exec",
+    data: $("#userbaseRefill").serialize(),
+    type: "POST",
+    success: function(response) {
+      $(".success-message-history").css("display", "block");
+      $('#userbaseRefill')[0].reset();
+      fadeOut(".success-message-history");
+    },
+    error: function(err) {
+      $(".error-message-history").css("display", "block");
+      fadeOut(".error-message-history");
+    }
+  })
+})
+
 function fadeOut(className) {
   setTimeout(function(){
     $(className).remove();

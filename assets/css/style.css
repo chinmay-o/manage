@@ -100,6 +100,12 @@ body {
   margin-bottom: 20px;
 }
 
+.salesData {
+
+  display: none;
+  margin-bottom: 20px;
+}
+
 .float{
 
 	position:fixed;
@@ -112,11 +118,45 @@ body {
 	border-radius:50px;
 	text-align:center;
 	box-shadow: 2px 2px 3px #999;
+  z-index: 1000;
 }
 
 .my-float{
 
 	margin-top:22px;
+}
+
+#userStat h1 {
+
+  font-weight: bold;
+}
+
+.totalLeft {
+
+  text-align: right;
+  font-weight: 600;
+  margin-top: 150%;
+  margin-right: -20px;
+  color: #ecb91f;
+}
+
+.totalRight {
+
+  text-align: left;
+  font-weight: 600;
+  margin-top: 40%;
+  margin-left: -20px;
+  color: #2e8403;
+}
+
+#salesStat h6 {
+
+  font-weight: 200;
+}
+
+#salesStat h1 {
+
+  font-weight: 600;
 }
 
 @media screen and (max-width: 500px) {

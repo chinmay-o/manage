@@ -28,13 +28,15 @@ fetch(url + apiKey).then((response) => response.json()).then((values) => {
 
 setTimeout(function() {
 
+  document.getElementById("userStat").innerHTML = '<div class="row text-center"><div class="col-6"><h6>Subscribed</h6><h1>' + userbaseStat()[0] + '</h1></div><div class="col-6"><h6>Unsubscribed</h6><h1>' + userbaseStat()[1] + '</h1></div></div>'
+
   for (var a = 0; a < uidno.length; a++) {
 
     if (sub[a] == "Subscribed") {
 
-      document.getElementById("userbase").innerHTML += '<div class="card mt-2 col-lg-4 col-sm-4 p-2" id="' + uidno[a] + '"><h6>' + join[a] + '</h6><h4 class="userDetails">' + user[a] + '</h4><div class="row"><div class="col-6"><span class="getUID">' + uidno[a] + '</span></div><div class="col-6">' + gender[a] + '</div></div></div>';
+      document.getElementById("userbase").innerHTML += '<div class="card mt-2 col-lg-4 col-sm-4 p-2" id="' + uidno[a] + '" data-bs-toggle="modal" data-bs-target="#userRefillModal"><div class="row"><h6 class="col-6">' + join[a] + '</h6><h6 class="col-6">Seller: ' + seller[a] + '</h6></div><h4 class="userDetails">' + user[a] + '</h4><div class="row"><div class="col-6"><span class="getUID">' + uidno[a] + '</span></div><div class="col-6">' + gender[a] + '</div></div></div>';
       index = true;
-      // fetchUID();
+      fetchUID();
     }
   }
 }, 3000);
@@ -47,6 +49,20 @@ function endLoader(){
     $(".userDatabase").css("display", "block");
     clearInterval(interv);
   }
+}
+
+function userbaseStat() {
+
+  var unsub = 0;
+  for (var x = 0; x < uidno.length; x++) {
+
+    if (sub[x] == "Unsubscribed") {
+
+      unsub += 1;
+    }
+  }
+
+  return [uidno.length-unsub, unsub];
 }
 
 var autofillUID;

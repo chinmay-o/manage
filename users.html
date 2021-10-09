@@ -22,7 +22,7 @@
         <a class="navbar-brand" href="#">
           <img src="assets/images/DD Logo.png" alt="" width="116.5" height="52.5" class="d-inline-block align-text-top">
         </a>
-        <h4 class="nav-sub-title">Management<br>System</h4>
+        <h4 class="nav-sub-title">Customer<br>Database</h4>
       </div>
     </nav>
 
@@ -42,6 +42,7 @@
 
       <div class="container">
 
+        <div id="userStat" class="mt-4 mb-6"></div>
         <div class="mt-4" id="userbase"></div>
 
       </div>
@@ -53,7 +54,7 @@
     </div>
 
     <!-- Refill Modal -->
-    <div class="modal fade" id="refillModal" tabindex="-1" aria-labelledby="refillModalLabel" aria-hidden="true">
+    <div class="modal fade" id="userRefillModal" tabindex="-1" aria-labelledby="userRefillModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
@@ -61,8 +62,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form id="userRefill">
-
+            <form id="userbaseRefill">
               <div class="mb-3 mt-3">
                 <label for="inputState" class="form-label">Unique Number</label>
                 <input id="autoUID" type="text" class="input-gray form-control" name="Mobile" placeholder="Mobile Number" readonly>

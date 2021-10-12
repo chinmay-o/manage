@@ -13,7 +13,8 @@ moment.locale('in')
 
 fetch(urlA + apiKey).then((response) => response.json()).then((values) => {
     dataA = values;
-    for (var i = 1; i < dataA.values.length; i++) {
+    for (var i = dataA.values.length-1; i > 0; i--) {
+
       let repeat = 0;
       let number = dataA.values[i][1];
       let etrDate = dataA.values[i][4];

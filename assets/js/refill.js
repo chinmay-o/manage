@@ -60,7 +60,7 @@ setTimeout(function() {
 
     etrFormat = moment(etr[a],"DD/MM/YYYY");
     eteFormat = moment(ete[a],"DD/MM/YYYY");
-    if (moment(Date.now()).isAfter(etrFormat) && moment(Date.now()).isBefore(eteFormat)) {
+    if (moment(Date.now()).isAfter(etrFormat)) {
 
       document.getElementById("refillTable").innerHTML += '<div class="card mt-2 col-lg-4 col-sm-4 p-2" id="' + uidno[a] + '" data-bs-toggle="modal" data-bs-target="#refillModal"><h6>Estimated Refill Period:</h6><h4>' + moment(etrFormat).format("DD MMM YYYY") + " to " + moment(eteFormat).format("DD MMM YYYY") + '</h4><h6 class="userDetails">Customer Details:</h6><div class="row"><div class="col-6"><span class="getUID">' + uidno[a] + '</span></div><div class="col-6">' + user[a] + '</div></div></div>';
 

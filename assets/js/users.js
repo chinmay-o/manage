@@ -123,9 +123,18 @@ function progress(uniqueID) {
       var totalDays = moment(ete[f], "DD/MM/YYYY").diff(moment(purchase[f], "DD/MM/YYYY"), 'days');
       var tillDays = moment(Date.now()).diff(moment(purchase[f], "DD/MM/YYYY"), 'days');
       purchaseDate = moment(purchase[f], "DD/MM/YYYY").format("DD/MM/YYYY");
-      
+
       var usagePer = (tillDays/totalDays) * 100;
-      return '<div class="inlined"><div class="progress-meter"><div class="track"><span class="progress" style="width:' + usagePer + '%"></span></div><ol class="progress-points" data-current="3"><li class="progress-point"><span class="label">' + purchaseDate + '</span></li><li class="progress-point"><span class="label">' + etr[f] + '</span></li><li class="progress-point"><span class="label">' + ete[f] + '</span></li></ol></div></div>'
+      if (usagePer > 100) {
+
+        return '<div class="inlined"><div class="progress-meter"><div class="track"><span class="progress" style="width:100%"></span></div><ol class="progress-points" data-current="3"><li class="progress-point"><span class="label">' + purchaseDate + '</span></li><li class="progress-point"><span class="label">' + etr[f] + '</span></li><li class="progress-point"><span class="label">' + ete[f] + '</span></li></ol></div></div>';
+      }
+
+      else {
+
+        return '<div class="inlined"><div class="progress-meter"><div class="track"><span class="progress" style="width:' + usagePer + '%"></span></div><ol class="progress-points" data-current="3"><li class="progress-point"><span class="label">' + purchaseDate + '</span></li><li class="progress-point"><span class="label">' + etr[f] + '</span></li><li class="progress-point"><span class="label">' + ete[f] + '</span></li></ol></div></div>';
+      }
+
     }
   }
 }

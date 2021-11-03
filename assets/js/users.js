@@ -71,7 +71,7 @@ setTimeout(function() {
 
     if (sub[a] == "Subscribed") {
 
-      document.getElementById("userbase").innerHTML += '<div class="card mt-2 col-lg-4 col-sm-4 p-2" id="' + uidno[a] + '" data-bs-toggle="modal" data-bs-target="#userRefillModal"><div class="row"><h6 class="col-6">' + join[a] + '</h6><h6 class="col-6">Seller: ' + seller[a] + '</h6></div><h4 class="userDetails">' + user[a] + '</h4><div class="row"><div class="col-6"><span class="getUID">' + uidno[a] + '</span></div><div class="col-6">' + gender[a] + '</div></div>'+ progress(uidno[a]) +'</div>';
+      document.getElementById("userbase").innerHTML += '<div class="card mt-2 mb-4 col-lg-4 col-sm-4 p-2" id="' + uidno[a] + '"><div data-bs-toggle="modal" data-bs-target="#userRefillModal"><div class="row"><h6 class="col-6">' + join[a] + '</h6><h6 class="col-6">Seller: ' + seller[a] + '</h6></div><h4 class="userDetails">' + user[a] + '</h4><div class="row"><div class="col-6"><span class="getUID">' + uidno[a] + '</span></div><div class="col-6">' + gender[a] + '</div></div>'+ progress(uidno[a]) +'</div><button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#logisticsModal">Order</button></div>';
 
       index = true;
       fetchUID();
@@ -111,6 +111,7 @@ function fetchUID() {
 
       autofillUID = $(this).attr('id');
       document.getElementById('autoUID').value = autofillUID;
+      document.getElementById('autoUIDorders').value = autofillUID;
 
    });
 }

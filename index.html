@@ -56,6 +56,25 @@
 
       </div>
 
+      <div class="container row section-row">
+
+
+        <div class="util-grid col-lg-3 col-sm-8 btn btn-light" data-bs-toggle="modal" data-bs-target="#logisticsModal">
+
+          <img src="assets/images/delivery-truck.png" alt="">
+          <h4>Order</h4>
+
+        </div>
+
+        <div class="util-grid col-lg-3 col-sm-8 btn btn-light" data-bs-toggle="modal" data-bs-target="#factsModal">
+
+          <img src="assets/images/fun-fact.png" alt="">
+          <h4>Add Facts</h4>
+
+        </div>
+
+      </div>
+
     </div>
 
     <!-- data get section -->
@@ -85,6 +104,13 @@
 
           <img src="assets/images/sales.png" alt="">
           <h4>Sales</h4>
+
+        </a>
+
+        <a href="orders.html" class="util-grid col-lg-4 col-sm-8 btn btn-light">
+
+          <img src="assets/images/online-order.png" alt="">
+          <h4>Order Status</h4>
 
         </a>
 
@@ -242,6 +268,116 @@
               <div class="success-message-non"><i class="fa fa-check text-primary"></i>
                 Transaction successfully updated.</div>
               <div class="error-message-non">We're sorry, but something went wrong</div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" value="submit" class="btn-upper btn-yellow btn custom-submit">Submit</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Logistics Modal -->
+    <div class="modal fade" id="logisticsModal" tabindex="-1" aria-labelledby="logisticsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">New Order</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="orderForm">
+              <div class="mb-3 mt-3">
+                <label for="inputState" class="form-label">Name</label>
+                <input type="text" class="input-gray form-control" name="Name" placeholder="Full Name" required>
+              </div>
+              <div class="mb-3 mt-3">
+                <label for="inputState" class="form-label">Address</label>
+                <input type="text" class="input-gray form-control" name="Address" placeholder="Address" required>
+              </div>
+              <div class="mb-3 mt-3">
+                <label for="inputState" class="form-label">Pin Code</label>
+                <input type="text" class="input-gray form-control" name="Pin Code" placeholder="Pin Code" required>
+              </div>
+              <div class="mb-3">
+                <label for="inputState" class="form-label">Product</label>
+                <select id="inputState" name="Product" class="form-select">
+                  <option selected>Choose...</option>
+                  <option>Almonds(100g)</option>
+                  <option>Almonds(200g)</option>
+                  <option>Almonds(500g)</option>
+                  <option>Cashews(100g)</option>
+                  <option>Cashews(200g)</option>
+                  <option>Cashews(500g)</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <div class="mb-3 mt-3">
+                  <label for="inputState" class="form-label mx-3">Quantity</label>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="Quantity" value="1">
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="Quantity" value="2">
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="Quantity" value="3">
+                    <label class="form-check-label" for="inlineRadio3">3</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="Quantity" value="4">
+                    <label class="form-check-label" for="inlineRadio4">4</label>
+                  </div>
+                </div>
+              </div>
+              <label for="inputState" class="form-label">Price</label>
+              <div class="mb-3 input-group">
+                <div class="input-group-text">₹</div>
+                <input type="text" class="input-gray form-control" name="Price" placeholder="Product Price" required>
+              </div>
+              <div class="mb-3">
+                <label for="inputState" class="form-label">Seller</label>
+                <select id="inputState" name="Seller" class="form-select">
+                  <option selected>Choose...</option>
+                  <option>Chinmay</option>
+                  <option>Sujith</option>
+                </select>
+              </div>
+              <div class="success-message-order"><i class="fa fa-check text-primary"></i>
+                Transaction successfully updated.</div>
+              <div class="error-message-order">We're sorry, but something went wrong</div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" value="submit" class="btn-upper btn-yellow btn custom-submit">Submit</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Logistics Modal -->
+    <div class="modal fade" id="factsModal" tabindex="-1" aria-labelledby="factsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">New Fact</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="factForm">
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Enter Fact</label>
+                <textarea type="text" class="input-gray form-control" name="Fact" placeholder="Facts" rows="3"></textarea>
+              </div>
+              <div class="success-message-fact"><i class="fa fa-check text-primary"></i>
+                Transaction successfully updated.</div>
+              <div class="error-message-fact">We're sorry, but something went wrong</div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="submit" value="submit" class="btn-upper btn-yellow btn custom-submit">Submit</button>

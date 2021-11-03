@@ -63,12 +63,12 @@ body {
   color: #ffffff;
 }
 
-.success-message-user, .success-message-history, .success-message-non {
+.success-message-user, .success-message-history, .success-message-non, .success-message-order, .success-message-fact {
 
   display: none;
 }
 
-.error-message-user, .error-message-history, .error-message-non {
+.error-message-user, .error-message-history, .error-message-non, .error-message-order, .error-message-fact {
 
   display: none;
 }

@@ -90,8 +90,44 @@ $("#userbaseRefill").submit((e) => {
   })
 })
 
+$("#factForm").submit((e) => {
+  e.preventDefault()
+  $.ajax({
+    url: "https://script.google.com/macros/s/AKfycbxirkoZYAZaJ0jLeyOVerEvYAlugC4FdJOYWyUG/exec",
+    data: $("#factForm").serialize(),
+    type: "POST",
+    success: function(response) {
+      $(".success-message-fact").css("display", "block");
+      $('#factForm')[0].reset();
+      fadeOut(".success-message-fact");
+    },
+    error: function(err) {
+      $(".error-message-fact").css("display", "block");
+      fadeOut(".error-message-fact");
+    }
+  })
+})
+
+$("#orderForm").submit((e) => {
+  e.preventDefault()
+  $.ajax({
+    url: "https://script.google.com/macros/s/AKfycbx5FjPL1FvSShLMLyaAF8yrB51LvALSl3yQVtAYZnQAYtudBFg/exec",
+    data: $("#orderForm").serialize(),
+    type: "POST",
+    success: function(response) {
+      $(".success-message-order").css("display", "block");
+      $('#orderForm')[0].reset();
+      fadeOut(".success-message-order");
+    },
+    error: function(err) {
+      $(".error-message-order").css("display", "block");
+      fadeOut(".error-message-order");
+    }
+  })
+})
+
 function fadeOut(className) {
   setTimeout(function(){
-    $(className).remove();
+    $(className).css("display", "none");
   }, 6000);
 }

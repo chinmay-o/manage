@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Users</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="shortcut icon" href="assets/images/administration.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/preloader.css">
+    <link rel="stylesheet" href="assets/css/consumption_loader.css">
+  </head>
+  <body>
+
+    <!-- navigation bar -->
+    <nav class="navbar navbar-light sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="assets/images/DD Logo.png" alt="" width="116.5" height="52.5" class="d-inline-block align-text-top">
+        </a>
+        <h4 class="nav-sub-title">Logistics<br>Database</h4>
+      </div>
+    </nav>
+
+    <!-- html section preloader -->
+    <!-- <section class="preloader">
+      <div class="box_section">
+        <div class="image_box">
+          <img alt="Fetching Data" src="assets/images/DD Logo Black.png" class="site_logo">
+        </div>
+        <div class="img_filter"></div>
+      </div>
+    </section> -->
+
+
+    <div class="">
+
+      <div class="container">
+
+        <div id="ordersDatabase"></div>
+
+      </div>
+
+      <a href="javascript:history.back()" class="float">
+        <i class="fa fa-arrow-left my-float"></i>
+      </a>
+
+    </div>
+
+    <!-- Dispatch Modal -->
+    <div class="modal fade" id="dispatchModal" tabindex="-1" aria-labelledby="dispatchModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Logistics Status</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="">
+              <div class="mb-3 mt-3">
+                <!-- <label for="inputState" class="form-label">Order ID</label> -->
+                <input id="" type="text" class="input-gray form-control" name="Order ID" placeholder="" readonly>
+              </div>
+              <div class="mb-3">
+                <label for="inputState" class="form-label">Handler</label>
+                <select id="inputState" name="Logistic Partner" class="form-select">
+                  <option selected>Choose...</option>
+                  <option>India Post</option>
+                  <option>ShipRocket</option>
+                  <option>Others</option>
+                </select>
+              </div>
+              <div class="mb-3 mt-3">
+                <label for="inputState" class="form-label">Parcel ID</label>
+                <input type="text" class="input-gray form-control" name="Logistic ID" placeholder="Postal ID" required>
+              </div>
+              <div class="mb-3 mt-3">
+                <label for="inputState" class="form-label">Delivery Charge</label>
+                <input type="text" class="input-gray form-control" name="Delivery Charge" placeholder="Delivery Charge" required>
+              </div>
+              <div class="mb-3 mt-3">
+                <label for="inputState" class="form-label">Packaging Cost</label>
+                <input type="text" class="input-gray form-control" name="Packaging Cost" placeholder="Packaging Cost" required>
+              </div>
+              <div class="mb-3">
+                <label for="inputState" class="form-label">Status</label>
+                <select id="inputState" name="Status" class="form-select">
+                  <option selected>Choose...</option>
+                  <option>Dispatched</option>
+                  <option>Delivered</option>
+                  <option>Returned</option>
+                </select>
+              </div>
+              <div class="success-message-history"><i class="fa fa-check text-primary"></i>
+                Transaction successfully updated.</div>
+              <div class="error-message-history">We're sorry, but something went wrong</div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" value="submit" class="btn-upper btn-yellow btn custom-submit">Submit</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Delivered Modal -->
+    <div class="modal fade" id="dispatchModal" tabindex="-1" aria-labelledby="dispatchModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Logistics Status</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="">
+              <div class="mb-3 mt-3">
+                <!-- <label for="inputState" class="form-label">Order ID</label> -->
+                <input id="" type="text" class="input-gray form-control" name="Order ID" placeholder="" readonly>
+              </div>
+              <div class="mb-3">
+                <label for="inputState" class="form-label">Handler</label>
+                <select id="inputState" name="Logistic Partner" class="form-select">
+                  <option selected>Choose...</option>
+                  <option>India Post</option>
+                  <option>ShipRocket</option>
+                  <option>Others</option>
+                </select>
+              </div>
+              <div class="mb-3 mt-3">
+                <label for="inputState" class="form-label">Parcel ID</label>
+                <input type="text" class="input-gray form-control" name="Logistic ID" placeholder="Postal ID" required>
+              </div>
+              <div class="mb-3 mt-3">
+                <label for="inputState" class="form-label">Delivery Charge</label>
+                <input type="text" class="input-gray form-control" name="Delivery Charge" placeholder="Delivery Charge" required>
+              </div>
+              <div class="mb-3 mt-3">
+                <label for="inputState" class="form-label">Packaging Cost</label>
+                <input type="text" class="input-gray form-control" name="Packaging Cost" placeholder="Packaging Cost" required>
+              </div>
+              <div class="mb-3">
+                <label for="inputState" class="form-label">Status</label>
+                <select id="inputState" name="Status" class="form-select">
+                  <option selected>Choose...</option>
+                  <option>Dispatched</option>
+                  <option>Delivered</option>
+                  <option>Returned</option>
+                </select>
+              </div>
+              <div class="success-message-history"><i class="fa fa-check text-primary"></i>
+                Transaction successfully updated.</div>
+              <div class="error-message-history">We're sorry, but something went wrong</div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" value="submit" class="btn-upper btn-yellow btn custom-submit">Submit</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+
+    <!-- custom -->
+    <script src="https://use.fontawesome.com/be05aa4937.js"></script>
+    <script type="text/javascript" src="assets/js/moment.js"></script>
+    <script type="text/javascript" src="assets/js/forms.js"></script>
+    <script type="text/javascript" src="assets/js/orders.js"></script>
+    <script type="text/javascript" src="assets/js/consumption_loader.js"></script>
+
+  </body>
+</html>

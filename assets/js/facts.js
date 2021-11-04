@@ -1,13 +1,14 @@
 
-let factData = null;
-let factDate = [];
-var autofillDate;
-
-var factURL = "https://sheets.googleapis.com/v4/spreadsheets/1wV7x9oDaBEOt5oONE82T_hgxyJyXLEoS7fK98zYfWow/values/responses?key="
-var apiKey = "AIzaSyBpaORBU9bCcAMmAbawXlxTpXr1LuAGjWw";
-
 
 function autoFinalDate() {
+
+
+  let factData = null;
+  let factDate = [];
+  var autofillDate;
+
+  var factURL = "https://sheets.googleapis.com/v4/spreadsheets/1wV7x9oDaBEOt5oONE82T_hgxyJyXLEoS7fK98zYfWow/values/responses?key="
+  var apiKey = "AIzaSyBpaORBU9bCcAMmAbawXlxTpXr1LuAGjWw";
 
   fetch(factURL + apiKey).then((response) => response.json()).then((values) => {
 

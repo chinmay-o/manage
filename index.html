@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/cards.css">
 
   </head>
   <body>
@@ -28,45 +29,45 @@
 
 
     <!-- data post section -->
-    <div class="container data-post">
+    <div class="container data-post text-center">
       <h2>New Entries</h2>
 
-      <div class="container row section-row">
+      <div class="row section-row">
 
-        <div class="util-grid col-lg-3 col-sm-8 btn btn-light" data-bs-toggle="modal" data-bs-target="#newUserModal">
+        <div class="util-grid col-3 btn" data-bs-toggle="modal" data-bs-target="#newUserModal">
 
           <img src="assets/images/add-group.png" alt="">
-          <h4>New User</h4>
+          <h4>New Consumer</h4>
 
         </div>
 
-        <div class="util-grid col-lg-3 col-sm-8 btn btn-light" data-bs-toggle="modal" data-bs-target="#productFillModal">
+        <div class="util-grid col-3 btn" data-bs-toggle="modal" data-bs-target="#productFillModal">
 
           <img src="assets/images/refill.png" alt="">
-          <h4>Product Fill</h4>
+          <h4>Product Refill</h4>
 
         </div>
 
-        <div class="util-grid col-lg-3 col-sm-8 btn btn-light" data-bs-toggle="modal" data-bs-target="#nonUserModal">
+        <div class="util-grid col-3 btn" data-bs-toggle="modal" data-bs-target="#nonUserModal">
 
           <img src="assets/images/follower.png" alt="">
-          <h4>Non-User Sales</h4>
+          <h4>Counter Sales</h4>
 
         </div>
 
       </div>
 
-      <div class="container row section-row">
+      <div class="row section-row mt-4">
 
 
-        <div class="util-grid col-lg-3 col-sm-8 btn btn-light" data-bs-toggle="modal" data-bs-target="#logisticsModal">
+        <div class="util-grid col-3 btn" data-bs-toggle="modal" data-bs-target="#logisticsModal">
 
           <img src="assets/images/delivery-truck.png" alt="">
           <h4>Order</h4>
 
         </div>
 
-        <div onclick="autoFinalDate()" class="util-grid col-lg-3 col-sm-8 btn btn-light" data-bs-toggle="modal" data-bs-target="#factsModal">
+        <div onclick="autoFinalDate()" class="util-grid col-3 btn" data-bs-toggle="modal" data-bs-target="#factsModal">
 
           <img src="assets/images/fun-fact.png" alt="">
           <h4>Add Facts</h4>
@@ -78,52 +79,76 @@
     </div>
 
     <!-- data get section -->
-    <div class="container data-get">
+    <div class="container data-get text-center">
       <h2>View Entries</h2>
-
-      <div class="container row section-row">
-
-        <a href="refill.html" class="util-grid col-lg-4 col-sm-8 btn btn-light">
-
-          <img src="assets/images/consumer.png" alt="">
-          <h4>Upcoming Refills</h4>
-
-        </a>
-
-        <a href="users.html" class="util-grid col-lg-4 col-sm-8 btn btn-light">
-
-          <img src="assets/images/customer.png" alt="">
-          <h4>Customers</h4>
-
-        </a>
-      </div>
-
-      <div class="container row section-row">
-
-        <a href="sales.html" class="util-grid col-lg-4 col-sm-8 btn btn-light">
-
-          <img src="assets/images/sales.png" alt="">
-          <h4>Sales</h4>
-
-        </a>
-
-        <a href="orders.html" class="util-grid col-lg-4 col-sm-8 btn btn-light">
-
-          <img src="assets/images/online-order.png" alt="">
-          <h4>Order Status</h4>
-
-        </a>
-
-        <a class="util-grid col-lg-4 col-sm-8 btn btn-light">
-
-          <img src="assets/images/rupee.png" alt="">
-          <h4>Transactions</h4>
-
-        </a>
-
-      </div>
-
     </div>
+    <section class="page-contain">
+      <a href="refill.html" class="data-card">
+        <img src="assets/images/consumer.png" alt="">
+        <h3></h3>
+        <h4>Upcoming Refills</h4>
+        <span class="link-text">
+          View All
+          <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M17.8631 0.929124L24.2271 7.29308C24.6176 7.68361 24.6176 8.31677 24.2271 8.7073L17.8631 15.0713C17.4726 15.4618 16.8394 15.4618 16.4489 15.0713C16.0584 14.6807 16.0584 14.0476 16.4489 13.657L21.1058 9.00019H0.47998V7.00019H21.1058L16.4489 2.34334C16.0584 1.95281 16.0584 1.31965 16.4489 0.929124C16.8394 0.538599 17.4726 0.538599 17.8631 0.929124Z"
+              fill="#753BBD" />
+          </svg>
+        </span>
+      </a>
+      <a href="users.html" class="data-card">
+        <img src="assets/images/customer.png" alt="">
+        <h3></h3>
+        <h4>Customers</h4>
+        <span class="link-text">
+          View All
+          <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M17.8631 0.929124L24.2271 7.29308C24.6176 7.68361 24.6176 8.31677 24.2271 8.7073L17.8631 15.0713C17.4726 15.4618 16.8394 15.4618 16.4489 15.0713C16.0584 14.6807 16.0584 14.0476 16.4489 13.657L21.1058 9.00019H0.47998V7.00019H21.1058L16.4489 2.34334C16.0584 1.95281 16.0584 1.31965 16.4489 0.929124C16.8394 0.538599 17.4726 0.538599 17.8631 0.929124Z"
+              fill="#753BBD" />
+          </svg>
+        </span>
+      </a>
+      <a href="sales.html" class="data-card">
+        <img src="assets/images/sales.png" alt="">
+        <h3></h3>
+        <h4>Sales Summary</h4>
+        <span class="link-text">
+          View All
+          <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M17.8631 0.929124L24.2271 7.29308C24.6176 7.68361 24.6176 8.31677 24.2271 8.7073L17.8631 15.0713C17.4726 15.4618 16.8394 15.4618 16.4489 15.0713C16.0584 14.6807 16.0584 14.0476 16.4489 13.657L21.1058 9.00019H0.47998V7.00019H21.1058L16.4489 2.34334C16.0584 1.95281 16.0584 1.31965 16.4489 0.929124C16.8394 0.538599 17.4726 0.538599 17.8631 0.929124Z"
+              fill="#753BBD" />
+          </svg>
+        </span>
+      </a>
+      <a href="orders.html" class="data-card">
+        <img src="assets/images/online-order.png" alt="">
+        <h3></h3>
+        <h4>Order Status</h4>
+        <span class="link-text">
+          View All
+          <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M17.8631 0.929124L24.2271 7.29308C24.6176 7.68361 24.6176 8.31677 24.2271 8.7073L17.8631 15.0713C17.4726 15.4618 16.8394 15.4618 16.4489 15.0713C16.0584 14.6807 16.0584 14.0476 16.4489 13.657L21.1058 9.00019H0.47998V7.00019H21.1058L16.4489 2.34334C16.0584 1.95281 16.0584 1.31965 16.4489 0.929124C16.8394 0.538599 17.4726 0.538599 17.8631 0.929124Z"
+              fill="#753BBD" />
+          </svg>
+        </span>
+      </a>
+      <a href="#" class="data-card">
+        <img src="assets/images/rupee.png" alt="">
+        <h3></h3>
+        <h4>Transactions</h4>
+        <span class="link-text">
+          View All
+          <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M17.8631 0.929124L24.2271 7.29308C24.6176 7.68361 24.6176 8.31677 24.2271 8.7073L17.8631 15.0713C17.4726 15.4618 16.8394 15.4618 16.4489 15.0713C16.0584 14.6807 16.0584 14.0476 16.4489 13.657L21.1058 9.00019H0.47998V7.00019H21.1058L16.4489 2.34334C16.0584 1.95281 16.0584 1.31965 16.4489 0.929124C16.8394 0.538599 17.4726 0.538599 17.8631 0.929124Z"
+              fill="#753BBD" />
+          </svg>
+        </span>
+      </a>
+    </section>
 
     <!-- New User Modal -->
     <div class="modal fade" id="newUserModal" tabindex="-1" aria-labelledby="newUserModalLabel" aria-hidden="true">

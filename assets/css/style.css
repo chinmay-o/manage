@@ -21,13 +21,12 @@ body {
 
 .data-post {
 
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 .data-get {
 
   margin-top: 60px;
-  margin-bottom: 60px;
 }
 
 .util-grid {
@@ -36,7 +35,7 @@ body {
   margin: auto;
   border-radius: 10px;
   margin-top: 24px;
-  height: 240px;
+  height: 140px;
 }
 
 .util-grid:hover {
@@ -47,14 +46,15 @@ body {
 
 .util-grid img {
 
-  width: 100px;
-  margin-top: 36px;
+  width: 68px;
+  margin-top: 16px;
 }
 
 .util-grid h4 {
 
-  margin-top: 40px;
-  font-weight: 600;
+  margin-top: 14px;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .custom-submit {
@@ -163,7 +163,12 @@ body {
 
   .section-row {
 
-    display: block;
+    /* display: block; */
     margin: auto;
+  }
+
+  .util-grid img {
+
+    margin-top: 2px;
   }
 }

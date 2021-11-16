@@ -10,10 +10,12 @@ $("#userData").submit((e) => {
       $(".success-message-user").css("display", "block");
       $('#userData')[0].reset();
       fadeOut(".success-message-user");
+      loadSpinner("none");
     },
     error: function(err) {
       $(".error-message-user").css("display", "block");
       fadeOut(".error-message-user");
+      loadSpinner("none");
     }
   })
 })
@@ -28,10 +30,12 @@ $("#userHistory").submit((e) => {
       $(".success-message-history").css("display", "block");
       $('#userHistory')[0].reset();
       fadeOut(".success-message-history");
+      loadSpinner("none");
     },
     error: function(err) {
       $(".error-message-history").css("display", "block");
       fadeOut(".error-message-history");
+      loadSpinner("none");
     }
   })
 })
@@ -46,10 +50,12 @@ $("#nonUserHistory").submit((e) => {
       $(".success-message-non").css("display", "block");
       $('#nonUserHistory')[0].reset();
       fadeOut(".success-message-non");
+      loadSpinner("none");
     },
     error: function(err) {
       $(".error-message-non").css("display", "block");
       fadeOut(".error-message-non");
+      loadSpinner("none");
     }
   })
 })
@@ -64,10 +70,12 @@ $("#userRefill").submit((e) => {
       $(".success-message-history").css("display", "block");
       $('#userRefill')[0].reset();
       fadeOut(".success-message-history");
+      loadSpinner("none");
     },
     error: function(err) {
       $(".error-message-history").css("display", "block");
       fadeOut(".error-message-history");
+      loadSpinner("none");
     }
   })
 })
@@ -82,10 +90,12 @@ $("#userbaseRefill").submit((e) => {
       $(".success-message-history").css("display", "block");
       $('#userbaseRefill')[0].reset();
       fadeOut(".success-message-history");
+      loadSpinner("none");
     },
     error: function(err) {
       $(".error-message-history").css("display", "block");
       fadeOut(".error-message-history");
+      loadSpinner("none");
     }
   })
 })
@@ -100,10 +110,12 @@ $("#factForm").submit((e) => {
       $(".success-message-fact").css("display", "block");
       $('#factForm')[0].reset();
       fadeOut(".success-message-fact");
+      loadSpinner("none");
     },
     error: function(err) {
       $(".error-message-fact").css("display", "block");
       fadeOut(".error-message-fact");
+      loadSpinner("none");
     }
   })
 })
@@ -118,13 +130,65 @@ $("#orderForm").submit((e) => {
       $(".success-message-order").css("display", "block");
       $('#orderForm')[0].reset();
       fadeOut(".success-message-order");
+      loadSpinner("none");
     },
     error: function(err) {
       $(".error-message-order").css("display", "block");
       fadeOut(".error-message-order");
+      loadSpinner("none");
     }
   })
 })
+
+$("#dispatchForm").submit((e) => {
+  e.preventDefault()
+  $.ajax({
+    url: "https://script.google.com/macros/s/AKfycbyG1UE4UbHzb0o46Zv2lak_1JtAJNjj-lJkwlgq3A/exec",
+    data: $("#dispatchForm").serialize(),
+    type: "POST",
+    success: function(response) {
+      $(".success-message-dispatch").css("display", "block");
+      $('#dispatchForm')[0].reset();
+      fadeOut(".success-message-dispatch");
+      loadSpinner("none");
+    },
+    error: function(err) {
+      $(".error-message-dispatch").css("display", "block");
+      fadeOut(".error-message-dispatch");
+      loadSpinner("none");
+    }
+  })
+})
+
+$("#dispatchStatusForm").submit((e) => {
+  e.preventDefault()
+  $.ajax({
+    url: "https://script.google.com/macros/s/AKfycbyR4biu3RBkdol8ioEInwT7vhpE9SFMxXL--6-L0Q/exec",
+    data: $("#dispatchStatusForm").serialize(),
+    type: "POST",
+    success: function(response) {
+      $(".success-message-d-status").css("display", "block");
+      $('#dispatchStatusForm')[0].reset();
+      fadeOut(".success-message-d-status");
+      loadSpinner("none");
+    },
+    error: function(err) {
+      $(".error-message-d-status").css("display", "block");
+      fadeOut(".error-message-d-status");
+      loadSpinner("none");
+    }
+  })
+})
+
+$('.custom-submit').click(function() {
+
+  loadSpinner("block");
+});
+
+function loadSpinner(attribute) {
+
+  $(".loadingScreen").css("display", attribute);
+}
 
 function fadeOut(className) {
   setTimeout(function(){

@@ -180,6 +180,26 @@ $("#dispatchStatusForm").submit((e) => {
   })
 })
 
+$("#addNewStock").submit((e) => {
+  e.preventDefault()
+  $.ajax({
+    url: "https://script.google.com/macros/s/AKfycbzzySLJoLP7Uds3t4vF2WNjIRCj--NNHOJTexqy/exec",
+    data: $("#addNewStock").serialize(),
+    type: "POST",
+    success: function(response) {
+      $(".success-message-newStock").css("display", "block");
+      $('#addNewStock')[0].reset();
+      fadeOut(".success-message-newStock");
+      loadSpinner("none");
+    },
+    error: function(err) {
+      $(".error-message-newStock").css("display", "block");
+      fadeOut(".error-message-newStock");
+      loadSpinner("none");
+    }
+  })
+})
+
 $('.custom-submit').click(function() {
 
   loadSpinner("block");

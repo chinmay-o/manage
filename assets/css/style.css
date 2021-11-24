@@ -68,7 +68,17 @@ body {
   display: none;
 }
 
+.success-message-newStock {
+
+  display: none;
+}
+
 .error-message-user, .error-message-history, .error-message-non, .error-message-order, .error-message-fact, .error-message-dispatch, .error-message-d-status {
+
+  display: none;
+}
+
+.error-message-newStock {
 
   display: none;
 }

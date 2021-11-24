@@ -52,7 +52,7 @@
         <div class="util-grid col-3 btn" data-bs-toggle="modal" data-bs-target="#nonUserModal">
 
           <img src="assets/images/follower.png" alt="">
-          <h4>Counter Sales</h4>
+          <h4>Non-User Sales</h4>
 
         </div>
 
@@ -60,6 +60,12 @@
 
       <div class="row section-row mt-4">
 
+        <div class="util-grid col-3 btn" data-bs-toggle="modal" data-bs-target="#nonUserModal">
+
+          <img src="assets/images/receptionist.png" alt="">
+          <h4>Counter Sales</h4>
+
+        </div>
 
         <div class="util-grid col-3 btn" data-bs-toggle="modal" data-bs-target="#logisticsModal">
 
@@ -72,6 +78,32 @@
 
           <img src="assets/images/fun-fact.png" alt="">
           <h4>Add Facts</h4>
+
+        </div>
+
+
+      </div>
+
+      <div class="row section-row mt-4">
+
+        <div class="util-grid col-3 btn" data-bs-toggle="modal" data-bs-target="#newStockModal">
+
+          <img src="assets/images/stock.png" alt="">
+          <h4>Add Stock</h4>
+
+        </div>
+
+        <div class="util-grid col-3 btn">
+
+          <img src="assets/images/lightning.png" alt="">
+          <h4>Add Black Adam</h4>
+
+        </div>
+
+        <div class="util-grid col-3 btn">
+
+          <img src="assets/images/pack.png" alt="">
+          <h4>New Production</h4>
 
         </div>
 
@@ -353,7 +385,6 @@
 
             </div>
             <form id="nonUserHistory">
-
               <div class="mb-3 mt-3">
                 <label for="inputState" class="form-label">Name</label>
                 <input type="text" class="input-gray form-control" name="Name" placeholder="Full Name">
@@ -551,6 +582,108 @@
               <div class="success-message-fact"><i class="fa fa-check text-primary"></i>
                 Transaction successfully updated.</div>
               <div class="error-message-fact">We're sorry, but something went wrong</div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" value="submit" class="btn-upper btn-yellow btn custom-submit">Submit</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- New Stock Modal -->
+    <div class="modal fade" id="newStockModal" tabindex="-1" aria-labelledby="newStockModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add New Stock</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="loadingScreen">
+              <div class="loadingBackground"></div>
+              <div class="loadingObject">
+                <div class="loader">
+                  <svg viewBox="0 0 80 80">
+                    <circle id="test" cx="40" cy="40" r="32"></circle>
+                  </svg>
+                </div>
+
+                <div class="loader triangle">
+                  <svg viewBox="0 0 86 80">
+                    <polygon points="43 8 79 72 7 72"></polygon>
+                  </svg>
+                </div>
+
+                <div class="loader">
+                  <svg viewBox="0 0 80 80">
+                    <rect x="8" y="8" width="64" height="64"></rect>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- dribbble -->
+              <a class="dribbble" href="https://dribbble.com/shots/5878367-Loaders" target="_blank"><img src="https://cdn.dribbble.com/assets/dribbble-ball-mark-2bd45f09c2fb58dbbfb44766d5d1d07c5a12972d602ef8b32204d28fa3dda554.svg" alt=""></a>
+
+            </div>
+            <form id="addNewStock">
+              <div class="mb-3 mt-3">
+                <label for="inputState" class="form-label">Bill No.</label>
+                <input type="text" class="input-gray form-control" name="Bill No." placeholder="Bill No." required>
+              </div>
+              <div class="mb-3">
+                <label for="inputState" class="form-label">Product</label>
+                <select id="inputState" name="Product" class="form-select">
+                  <option selected>Choose...</option>
+                  <option>Almonds</option>
+                  <option>Cashews</option>
+                </select>
+              </div>
+              <label for="inputState" class="form-label">1 Unit Mass</label>
+              <div class="mb-3 input-group">
+                <input type="text" class="input-gray form-control" name="1 Unit Mass" placeholder="Unit Mass in KG" required>
+                <div class="input-group-text">KG</div>
+              </div>
+              <div class="mb-3">
+                <div class="mb-3 mt-3">
+                  <label for="inputState" class="form-label mx-3">Quantity</label>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="Quantity" value="1">
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="Quantity" value="2">
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="Quantity" value="3">
+                    <label class="form-check-label" for="inlineRadio3">3</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="Quantity" value="4">
+                    <label class="form-check-label" for="inlineRadio4">4</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="Quantity" value="5">
+                    <label class="form-check-label" for="inlineRadio5">5</label>
+                  </div>
+                </div>
+              </div>
+              <label for="inputState" class="form-label">Price</label>
+              <div class="mb-3 input-group">
+                <div class="input-group-text">₹</div>
+                <input type="text" class="input-gray form-control" name="Price" placeholder="Product Price" required>
+              </div>
+              <label for="inputState" class="form-label">Logistics Cost</label>
+              <div class="mb-3 input-group">
+                <input type="text" class="input-gray form-control" name="Logistics Cost" placeholder="Cost for logistics" required>
+                <div class="input-group-text">₹</div>
+              </div>
+              <div class="success-message-newStock"><i class="fa fa-check text-primary"></i>
+                Transaction successfully updated.</div>
+              <div class="error-message-newStock">We're sorry, but something went wrong</div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="submit" value="submit" class="btn-upper btn-yellow btn custom-submit">Submit</button>

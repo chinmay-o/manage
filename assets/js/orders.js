@@ -123,7 +123,7 @@ function endLoader(){
   if (loader) {
 
     $(".preloader").css("display", "none");
-    $(".orders").css("display", "block");
+    $(".deliveries").css("display", "block");
     clearInterval(interv);
   }
 }

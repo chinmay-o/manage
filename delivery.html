@@ -39,7 +39,7 @@
     </section>
 
 
-    <div id="orders" class="orders">
+    <div class="deliveries">
 
       <div class="container">
 
@@ -59,7 +59,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Product Fill In</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn-close custom-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <div class="loadingScreen">
@@ -89,23 +89,20 @@
 
             </div>
             <form id="userHistory">
-
+              <div class="mb-3 mt-3">
+                <input type="text" class="input-gray form-control" id="refillOrderID" name="Order ID" placeholder="Order ID" readonly>
+              </div>
               <div class="mb-3 mt-3">
                 <label for="inputState" class="form-label">Unique Number</label>
-                <input type="text" class="input-gray form-control" name="Mobile" placeholder="Mobile Number">
+                <input type="text" id="refillUserID" class="input-gray form-control" name="Mobile" placeholder="Mobile Number" readonly>
               </div>
               <div class="mb-3 mt-3">
                 <label for="inputState" class="form-label">Quantity</label>
-                <select name="Quantity" class="form-select">
-                  <option selected>Choose...</option>
-                  <option>100 Grams</option>
-                  <option>200 Grams</option>
-                  <option>500 Grams</option>
-                </select>
+                <input type="text" id="refillQuantity" class="input-gray form-control" name="Quantity" placeholder="Quantity" readonly>
               </div>
               <label for="inputState" class="form-label">Price</label>
               <div class="mb-3 input-group">
-                <input type="text" class="input-gray form-control" name="Price" placeholder="Price">
+                <input type="text" id="refillPrice" class="input-gray form-control" name="Price" placeholder="Price" readonly>
                 <div class="input-group-text">₹</div>
               </div>
               <div class="mb-3">
@@ -120,7 +117,7 @@
                 Transaction successfully updated.</div>
               <div class="error-message-history">We're sorry, but something went wrong</div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary custom-close" data-bs-dismiss="modal">Close</button>
                 <button type="submit" value="submit" class="btn-upper btn-yellow btn custom-submit">Submit</button>
               </div>
             </form>
@@ -136,7 +133,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Non User Model</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn-close custom-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <div class="loadingScreen">
@@ -166,26 +163,28 @@
 
             </div>
             <form id="nonUserHistory">
-
+              <div class="mb-3 mt-3">
+                <input type="text" id="counterOrderID" class="input-gray form-control" name="Order ID" placeholder="Order ID" readonly>
+              </div>
               <div class="mb-3 mt-3">
                 <label for="inputState" class="form-label">Name</label>
-                <input type="text" class="input-gray form-control" name="Name" placeholder="Full Name">
+                <input type="text" id="counterName" class="input-gray form-control" name="Name" placeholder="Full Name" readonly>
+              </div>
+              <div class="mb-3 mt-3">
+                <label for="inputState" class="form-label">Products</label>
+                <input type="text" id="counterProduct" class="input-gray form-control" name="Product" placeholder="Product" readonly>
               </div>
               <div class="mb-3 mt-3">
                 <label for="inputState" class="form-label">Quantity</label>
-                <input type="text" class="input-gray form-control" name="Quantity" placeholder="Quantity">
+                <input type="text" id="counterQuantity" class="input-gray form-control" name="Quantity" placeholder="Quantity" readonly>
               </div>
               <div class="mb-3 mt-3">
                 <label for="inputState" class="form-label">Price</label>
-                <input type="text" class="input-gray form-control" name="Price" placeholder="Price">
+                <input type="text" id="counterPrice" class="input-gray form-control" name="Price" placeholder="Price" readonly>
               </div>
               <div class="mb-3">
                 <label for="inputState" class="form-label">Seller</label>
-                <select id="inputState" name="Seller" class="form-select">
-                  <option selected>Choose...</option>
-                  <option>Chinmay</option>
-                  <option>Sujith</option>
-                </select>
+                <input type="text" id="counterSeller" class="input-gray form-control" name="Seller" placeholder="Seller" readonly>
               </div>
               <div class="mb-3">
                 <label for="inputState" class="form-label">Payment</label>
@@ -199,7 +198,7 @@
                 Transaction successfully updated.</div>
               <div class="error-message-non">We're sorry, but something went wrong</div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary custom-close" data-bs-dismiss="modal">Close</button>
                 <button type="submit" value="submit" class="btn-upper btn-yellow btn custom-submit">Submit</button>
               </div>
             </form>
